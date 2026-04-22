@@ -11,8 +11,6 @@
 <style>
 html{scroll-behavior:smooth;}
 
-section{scroll-margin-top:80px;}
-
 body{
   margin:0;
   font-family:system-ui, Arial;
@@ -20,7 +18,6 @@ body{
   color:#0f172a;
 }
 
-/* NAV */
 .nav{
   position:sticky;
   top:0;
@@ -38,71 +35,103 @@ body{
   color:#0f172a;
 }
 
-/* HERO */
 .hero{
   padding:80px 20px;
   text-align:center;
-  background:linear-gradient(135deg,#fff,#e0f2fe,#ecfdf5);
+  background:linear-gradient(135deg,#ffffff,#e0f2fe,#ecfdf5);
 }
 
-.hero h1{font-size:44px;margin:0;}
+.hero h1{
+  font-size:44px;
+  margin:0;
+}
 
 .hero p{
   max-width:700px;
   margin:15px auto;
   color:#475569;
+  line-height:1.7;
 }
 
+/* IMAGE CONSISTENT FIX */
 img{
   width:100%;
-  height:180px;
-  object-fit:contain;
-  background:#f8fafc;
-  padding:10px;
+  height:220px;
+  object-fit:cover;
   border-radius:14px;
+  background:#f8fafc;
 }
 
-/* CARD */
+.hero img{
+  height:320px;
+}
+
+/* SECTION */
+.section{
+  padding:70px 20px;
+  text-align:center;
+}
+
 .card{
   background:white;
   max-width:1000px;
   margin:auto;
   padding:30px;
-  border-radius:18px;
+  border-radius:20px;
   box-shadow:0 20px 50px rgba(0,0,0,0.08);
 }
 
-.section{
-  padding:70px 20px;
-}
+h2{margin-bottom:10px;}
+p{color:#475569;line-height:1.8;}
 
-/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
   gap:12px;
+  margin-top:20px;
 }
 
-/* ARTICLE FIX SUPER KUAT */
-#artikel{
-  background:#ffffff;
+/* PRICE BOX */
+.price{
+  display:grid;
+  gap:15px;
+  margin-top:20px;
 }
 
-.article-box{
+.price-box{
+  background:#f1f5f9;
+  padding:18px;
+  border-radius:14px;
+}
+
+.price-box h3{margin:0;}
+
+.btn{
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  margin-top:15px;
+  color:white;
+  background:#16a34a;
+}
+
+/* ARTICLE */
+.article{
+  text-align:left;
   max-width:900px;
   margin:auto;
   background:white;
-  padding:35px;
+  padding:30px;
   border-radius:18px;
   box-shadow:0 20px 50px rgba(0,0,0,0.08);
-  text-align:left;
   line-height:1.9;
 }
 
-.article-box h2{
-  text-align:center;
+.article h3{
+  margin-top:20px;
 }
-
 </style>
 </head>
 
@@ -111,6 +140,7 @@ img{
 <!-- NAV -->
 <div class="nav">
   <a href="#home">Home</a>
+  <a href="#harga">Harga</a>
   <a href="#produk">Produk</a>
   <a href="#artikel">Artikel</a>
 </div>
@@ -128,49 +158,45 @@ img{
 
 </section>
 
-<!-- PRODUK -->
-<section id="produk" class="section">
+<!-- HARGA -->
+<section id="harga" class="section">
 <div class="card">
-<section style="padding:60px 20px; text-align:center;">
 
-  <div style="max-width:900px; margin:auto; background:white; padding:30px; border-radius:18px; box-shadow:0 20px 50px rgba(0,0,0,0.08);">
+  <h2>Harga Paket KAFARA</h2>
 
-    <h2>Harga Paket KAFARA</h2>
+  <div class="price">
 
-    <p style="color:#475569;">
-      Pilihan paket kain kafan lengkap sesuai kebutuhan fardhu kifayah.
-    </p>
-
-    <div style="display:grid; gap:12px; margin-top:20px;">
-
-      <div style="background:#f1f5f9; padding:18px; border-radius:12px;">
-        <h3 style="margin:0;">👩 Paket Perempuan</h3>
-        <p style="font-size:22px; font-weight:bold; color:#16a34a;">Rp 650.000</p>
-        <p>Sudah termasuk perlengkapan lengkap siap pakai</p>
-      </div>
-
-      <div style="background:#f1f5f9; padding:18px; border-radius:12px;">
-        <h3 style="margin:0;">👨 Paket Laki-laki</h3>
-        <p style="font-size:22px; font-weight:bold; color:#2563eb;">Rp 630.000</p>
-        <p>Sudah termasuk perlengkapan lengkap siap pakai</p>
-      </div>
-
+    <div class="price-box">
+      <h3>👩 Paket Perempuan</h3>
+      <p><b style="color:#16a34a;font-size:22px;">Rp 650.000</b></p>
+      <p>Sudah termasuk perlengkapan lengkap siap pakai</p>
     </div>
 
-    <a href="https://wa.me/6285752208934"
-       style="display:inline-block; margin-top:20px; padding:14px 22px; background:#16a34a; color:white; text-decoration:none; border-radius:12px; font-weight:600;">
-      👉 Order / Tanya via WhatsApp
-    </a>
+    <div class="price-box">
+      <h3>👨 Paket Laki-laki</h3>
+      <p><b style="color:#2563eb;font-size:22px;">Rp 630.000</b></p>
+      <p>Sudah termasuk perlengkapan lengkap siap pakai</p>
+    </div>
 
   </div>
 
+  <a class="btn" href="https://wa.me/6285752208934">
+    👉 Order Sekarang
+  </a>
+
+</div>
 </section>
+
+<!-- PRODUK -->
+<section id="produk" class="section">
+<div class="card">
+
   <h2>Produk KAFARA</h2>
 
   <div class="grid">
     <img src="produc1.jpg.png">
     <img src="produk2.jpg">
-    <img src="produk3.jpg">
+    <img src="produk3.jp3">
     <img src="produk4.jpg">
     <img src="produk5.jpg">
     <img src="produk6.jpg">
@@ -179,15 +205,15 @@ img{
 </div>
 </section>
 
-<!-- ARTIKEL (FIX TOTAL ANTI BLANK) -->
+<!-- ARTIKEL -->
 <section id="artikel" class="section">
 
-<div class="article-box">
+<div class="article">
 
   <h2>Artikel Edukasi KAFARA</h2>
 
   <p>
-    KAFARA hadir menyediakan perlengkapan pemulasaraan jenazah lengkap sesuai syariat Islam.
+    KAFARA menyediakan perlengkapan pemulasaraan jenazah lengkap sesuai syariat Islam.
   </p>
 
   <h3>Apa itu kain kafan?</h3>
@@ -199,7 +225,7 @@ img{
   <h3>Kenapa harus siap?</h3>
   <p>Kematian tidak dapat diprediksi sehingga perlu persiapan sejak dini.</p>
 
-  <h3>Peluang usaha</h3>
+  <h3>Peluang reseller</h3>
   <p>Produk ini memiliki permintaan stabil di masyarakat muslim.</p>
 
 </div>
