@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Thafara Store - Marketplace</title>
+<title>Thafara Marketplace - Kain Kafan Lengkap</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,99 +11,53 @@ body{
   margin:0;
   font-family:Arial;
   background:#f5f7fb;
+  color:#111827;
 }
 
-/* LOGIN MODAL */
-.login{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.6);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index:999;
-}
-
-.login-box{
-  background:white;
-  padding:25px;
-  border-radius:15px;
-  text-align:center;
-  width:300px;
-}
-
-.login-box input{
-  width:100%;
-  padding:10px;
-  margin-top:10px;
-  border-radius:8px;
-  border:1px solid #ddd;
-}
-
-.login-box button{
-  margin-top:15px;
-  width:100%;
-  padding:10px;
+/* TOP BAR */
+.topbar{
   background:#16a34a;
   color:white;
-  border:none;
-  border-radius:8px;
+  padding:12px;
+  text-align:center;
   font-weight:bold;
 }
 
 /* HEADER */
 .header{
   background:white;
-  padding:15px;
-  text-align:center;
+  padding:20px;
   box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  position:sticky;
+  top:0;
+  z-index:10;
 }
 
 .header h1{
   margin:0;
+  font-size:26px;
 }
 
-/* FILTER */
-.filter{
-  text-align:center;
-  margin:15px;
+/* SEARCH BAR */
+.search{
+  margin-top:10px;
+  display:flex;
+  justify-content:center;
 }
 
-.filter button{
-  padding:8px 12px;
-  margin:5px;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-  background:#e5e7eb;
-}
-
-.filter button.active{
-  background:#16a34a;
-  color:white;
-}
-
-/* CART */
-.cart{
-  position:fixed;
-  top:10px;
-  right:10px;
-  background:#ef4444;
-  color:white;
-  padding:10px 15px;
-  border-radius:20px;
-  font-weight:bold;
-  z-index:1000;
+.search input{
+  width:90%;
+  max-width:500px;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #ddd;
 }
 
 /* GRID */
 .container{
   max-width:1100px;
   margin:auto;
-  padding:15px;
+  padding:20px;
 }
 
 .grid{
@@ -112,17 +66,22 @@ body{
   gap:15px;
 }
 
-/* CARD */
+/* PRODUCT CARD */
 .card{
   background:white;
-  border-radius:15px;
+  border-radius:16px;
   overflow:hidden;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
 }
 
 .card img{
   width:100%;
-  height:200px;
+  height:220px;
   object-fit:cover;
 }
 
@@ -133,23 +92,40 @@ body{
 .price{
   color:#16a34a;
   font-weight:bold;
+  font-size:18px;
 }
 
-/* BUTTON */
+/* BUTTONS */
 .btn{
   display:block;
   text-align:center;
   padding:10px;
-  margin-top:8px;
   border-radius:10px;
   text-decoration:none;
   font-weight:bold;
-  cursor:pointer;
+  margin-top:8px;
+  transition:0.3s;
 }
 
-.wa{background:#16a34a;color:white;}
-.shopee{background:#ef4444;color:white;}
-.cartbtn{background:#2563eb;color:white;}
+.btn:hover{
+  transform:scale(1.03);
+}
+
+.wa{
+  background:#16a34a;
+  color:white;
+}
+
+.shopee{
+  background:#ef4444;
+  color:white;
+}
+
+/* SECTION TITLE */
+.title{
+  text-align:center;
+  margin:30px 0;
+}
 
 /* MAP */
 .map{
@@ -157,121 +133,156 @@ body{
   height:300px;
   border:0;
   border-radius:12px;
-  margin-top:20px;
 }
 
-/* HIDE */
-.hidden{display:none;}
+/* FOOTER */
+.footer{
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:30px;
+}
 
 </style>
+
 </head>
 
 <body>
 
-<!-- LOGIN -->
-<div class="login" id="login">
-  <div class="login-box">
-    <h3>Login Thafara Store</h3>
-    <input placeholder="Username">
-    <input type="password" placeholder="Password">
-    <button onclick="document.getElementById('login').style.display='none'">
-      Masuk
-    </button>
-  </div>
-</div>
-
-<!-- CART -->
-<div class="cart">
-  🛒 <span id="cart">0</span>
+<!-- TOP BAR -->
+<div class="topbar">
+  ⚡ Thafara Marketplace - Kain Kafan Lengkap & Siap Pakai
 </div>
 
 <!-- HEADER -->
 <div class="header">
   <h1>THAFARA STORE</h1>
-</div>
 
-<!-- FILTER -->
-<div class="filter">
-  <button class="active" onclick="filter('all')">Semua</button>
-  <button onclick="filter('perempuan')">Perempuan</button>
-  <button onclick="filter('laki')">Laki-laki</button>
-  <button onclick="filter('masjid')">Masjid</button>
+  <div class="search">
+    <input type="text" placeholder="Cari paket kain kafan...">
+  </div>
 </div>
 
 <!-- PRODUCTS -->
 <div class="container">
+
+<h2 class="title">🛍️ Katalog Produk Premium</h2>
+
 <div class="grid">
 
-<!-- PRODUCT 1 -->
-<div class="card item perempuan">
+<!-- 1 -->
+<div class="card">
   <img src="produk11.jpg.jpeg">
   <div class="content">
     <h3>Paket Perempuan</h3>
     <div class="price">Rp 650.000</div>
 
-    <div class="btn cartbtn" onclick="addCart()">+ Add to Cart</div>
-    <a class="btn wa" href="https://wa.me/6285752208934">WhatsApp</a>
-    <a class="btn shopee" href="https://id.shp.ee/ceqrooAD" target="_blank">Shopee</a>
+    <a class="btn wa"
+       href="https://wa.me/6285752208934?text=Saya%20mau%20order%20Paket%20Perempuan">
+      💬 WhatsApp
+    </a>
+
+    <a class="btn shopee"
+       href="https://id.shp.ee/ceqrooAD"
+       target="_blank">
+      🛒 Shopee
+    </a>
   </div>
 </div>
 
-<!-- PRODUCT 2 -->
-<div class="card item laki">
+<!-- 2 -->
+<div class="card">
   <img src="produk12.jpg.jpeg">
   <div class="content">
     <h3>Paket Laki-laki</h3>
     <div class="price">Rp 630.000</div>
 
-    <div class="btn cartbtn" onclick="addCart()">+ Add to Cart</div>
-    <a class="btn wa" href="https://wa.me/6285752208934">WhatsApp</a>
-    <a class="btn shopee" href="https://id.shp.ee/ceqrooAD" target="_blank">Shopee</a>
+    <a class="btn wa"
+       href="https://wa.me/6285752208934">
+      💬 WhatsApp
+    </a>
+
+    <a class="btn shopee"
+       href="https://id.shp.ee/ceqrooAD"
+       target="_blank">
+      🛒 Shopee
+    </a>
   </div>
 </div>
 
-<!-- PRODUCT 3 -->
-<div class="card item masjid">
+<!-- 3 -->
+<div class="card">
   <img src="produk13.jpg.jpeg">
+  <div class="content">
+    <h3>Paket Standar</h3>
+    <div class="price">Rp 600.000</div>
+
+    <a class="btn wa"
+       href="https://wa.me/6285752208934">
+      💬 WhatsApp
+    </a>
+
+    <a class="btn shopee"
+       href="https://id.shp.ee/ceqrooAD"
+       target="_blank">
+      🛒 Shopee
+    </a>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="card">
+  <img src="produk14.jpg.jpeg">
+  <div class="content">
+    <h3>Paket Premium</h3>
+    <div class="price">Rp 700.000</div>
+
+    <a class="btn wa" href="https://wa.me/6285752208934">💬 WhatsApp</a>
+    <a class="btn shopee" href="https://id.shp.ee/ceqrooAD" target="_blank">🛒 Shopee</a>
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="card">
+  <img src="produk15.jpg.jpeg">
   <div class="content">
     <h3>Paket Masjid</h3>
     <div class="price">Rp 750.000</div>
 
-    <div class="btn cartbtn" onclick="addCart()">+ Add to Cart</div>
-    <a class="btn wa" href="https://wa.me/6285752208934">WhatsApp</a>
-    <a class="btn shopee" href="https://id.shp.ee/ceqrooAD" target="_blank">Shopee</a>
+    <a class="btn wa" href="https://wa.me/6285752208934">💬 WhatsApp</a>
+    <a class="btn shopee" href="https://id.shp.ee/ceqrooAD" target="_blank">🛒 Shopee</a>
+  </div>
+</div>
+
+<!-- 6 -->
+<div class="card">
+  <img src="produk16.jpg.jpeg">
+  <div class="content">
+    <h3>Paket Darurat</h3>
+    <div class="price">Rp 580.000</div>
+
+    <a class="btn wa" href="https://wa.me/6285752208934">💬 WhatsApp</a>
+    <a class="btn shopee" href="https://id.shp.ee/ceqrooAD" target="_blank">🛒 Shopee</a>
   </div>
 </div>
 
 </div>
 
-<!-- MAP -->
-<h2 style="text-align:center;margin-top:30px;">📍 Lokasi Kami</h2>
+<!-- MAPS -->
+<h2 class="title">📍 Lokasi Kami</h2>
 
-<iframe class="map"
-src="https://www.google.com/maps?q=HtiU5xhVNah5xpyC7&output=embed">
+<iframe
+  class="map"
+  src="https://www.google.com/maps?q=HtiU5xhVNah5xpyC7&output=embed">
 </iframe>
 
 </div>
 
-<script>
-let count = 0;
-
-function addCart(){
-  count++;
-  document.getElementById('cart').innerText = count;
-}
-
-function filter(cat){
-  let items = document.querySelectorAll('.item');
-
-  items.forEach(i=>{
-    if(cat=='all'){
-      i.style.display='block';
-    } else {
-      i.classList.contains(cat) ? i.style.display='block' : i.style.display='none';
-    }
-  });
-}
-</script>
+<!-- FOOTER -->
+<div class="footer">
+  © Thafara Marketplace - Kain Kafan Lengkap
+</div>
 
 </body>
 </html>
