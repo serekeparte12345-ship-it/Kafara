@@ -20,7 +20,8 @@ body{
   background:white;
   display:flex;
   justify-content:center;
-  gap:15px;
+  flex-wrap:wrap;
+  gap:10px;
   padding:12px;
   box-shadow:0 5px 15px rgba(0,0,0,0.05);
   z-index:10;
@@ -93,6 +94,7 @@ body{
 
 .wa{background:#16a34a;color:white;}
 .shopee{background:#ef4444;color:white;}
+.reseller{background:#2563eb;color:white;}
 
 /* MAP */
 .map{
@@ -101,6 +103,8 @@ body{
   border:0;
   border-radius:12px;
 }
+
+p{line-height:1.6}
 
 </style>
 </head>
@@ -111,7 +115,7 @@ body{
 <div class="nav">
   <button class="active" onclick="showPage('home')">Home</button>
   <button onclick="showPage('produk')">Produk</button>
-  <button onclick="showPage('checkout')">Checkout</button>
+  <button onclick="showPage('reseller')">Reseller</button>
   <button onclick="showPage('maps')">Maps</button>
 </div>
 
@@ -119,27 +123,56 @@ body{
 <div id="home" class="page active">
   <div class="card">
     <h1>THAFARA STORE</h1>
-    <p>Kain Kafan Lengkap & Siap Pakai</p>
+
+    <p>
+      Thafara adalah penyedia kain kafan lengkap dan perlengkapan jenazah siap pakai sesuai syariat Islam.
+      Kami hadir untuk membantu kebutuhan fardhu kifayah agar lebih mudah, cepat, dan siap kapan saja.
+    </p>
+
+    <p>
+      Produk kami digunakan oleh masjid, mushola, dan keluarga muslim di berbagai daerah.
+    </p>
   </div>
 </div>
 
 <!-- PRODUK -->
 <div id="produk" class="page">
   <div class="card">
-    <h2>Produk Thafara</h2>
+    <h2>Katalog Produk</h2>
 
     <div class="grid">
 
       <div class="item">
         <img src="produk11.jpg.jpeg">
-        <h3>Paket Perempuan</h3>
+        <h3>Perempuan</h3>
         <a class="btn wa" href="https://wa.me/6285752208934">WhatsApp</a>
         <a class="btn shopee" href="https://id.shp.ee/ceqrooAD" target="_blank">Shopee</a>
       </div>
 
       <div class="item">
         <img src="produk12.jpg.jpeg">
-        <h3>Paket Laki-laki</h3>
+        <h3>Laki-laki</h3>
+        <a class="btn wa" href="https://wa.me/6285752208934">WhatsApp</a>
+        <a class="btn shopee" href="https://id.shp.ee/ceqrooAD" target="_blank">Shopee</a>
+      </div>
+
+      <div class="item">
+        <img src="produk13.jpg.jpeg">
+        <h3>Couple Paket</h3>
+        <a class="btn wa" href="https://wa.me/6285752208934">WhatsApp</a>
+        <a class="btn shopee" href="https://id.shp.ee/ceqrooAD" target="_blank">Shopee</a>
+      </div>
+
+      <div class="item">
+        <img src="produk14.jpg.jpeg">
+        <h3>Standar</h3>
+        <a class="btn wa" href="https://wa.me/6285752208934">WhatsApp</a>
+        <a class="btn shopee" href="https://id.shp.ee/ceqrooAD" target="_blank">Shopee</a>
+      </div>
+
+      <div class="item">
+        <img src="produk15.jpg.jpeg">
+        <h3>Paket Masjid</h3>
         <a class="btn wa" href="https://wa.me/6285752208934">WhatsApp</a>
         <a class="btn shopee" href="https://id.shp.ee/ceqrooAD" target="_blank">Shopee</a>
       </div>
@@ -148,27 +181,41 @@ body{
   </div>
 </div>
 
-<!-- CHECKOUT -->
-<div id="checkout" class="page">
+<!-- RESELLER -->
+<div id="reseller" class="page">
   <div class="card">
-    <h2>Checkout</h2>
-    <p>Tekan tombol di bawah untuk order cepat</p>
 
-    <a class="btn wa"
-       href="https://wa.me/6285752208934?text=Saya%20mau%20order%20Thafara">
-      ⚡ Order via WhatsApp
+    <h2>Program Reseller Thafara</h2>
+
+    <p>
+      Bergabung menjadi reseller Thafara dan dapatkan peluang usaha
+      di bidang perlengkapan fardhu kifayah yang stabil dan terus dibutuhkan.
+    </p>
+
+    <p>
+      ✔ Tanpa ribet  
+      ✔ Produk selalu dibutuhkan  
+      ✔ Cocok untuk daerah / masjid
+    </p>
+
+    <a class="btn reseller"
+       href="https://wa.me/6285752208934?text=Saya%20mau%20jadi%20reseller%20Thafara">
+      💼 Gabung Reseller
     </a>
+
   </div>
 </div>
 
 <!-- MAPS -->
 <div id="maps" class="page">
   <div class="card">
+
     <h2>Lokasi Kami</h2>
 
     <iframe class="map"
     src="https://www.google.com/maps?q=HtiU5xhVNah5xpyC7&output=embed">
     </iframe>
+
   </div>
 </div>
 
