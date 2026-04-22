@@ -2,345 +2,250 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Thafara - Kain Kafan Lengkap</title>
+<title>Thafara - Katalog Kain Kafan</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Thafara menyediakan kain kafan lengkap, perlengkapan jenazah siap pakai sesuai syariat Islam.">
-
 <style>
-*{box-sizing:border-box}
-
 body{
   margin:0;
   font-family:Arial;
   background:#f5f7fb;
   color:#111827;
-  scroll-behavior:smooth;
 }
 
-/* NAV */
-.nav{
-  position:sticky;
-  top:0;
-  background:white;
-  padding:14px;
-  text-align:center;
-  box-shadow:0 2px 10px rgba(0,0,0,0.06);
-  z-index:10;
-}
-
-.nav a{
-  margin:10px;
-  text-decoration:none;
-  font-weight:bold;
-  color:#111827;
-}
-
-/* HERO */
-.hero{
+/* HEADER */
+.header{
   background:linear-gradient(135deg,#16a34a,#22c55e);
   color:white;
   text-align:center;
-  padding:90px 20px;
-  animation:fadeDown 1s ease;
+  padding:60px 20px;
 }
 
-.hero h1{
-  font-size:44px;
+.header h1{
   margin:0;
-  letter-spacing:2px;
+  font-size:40px;
 }
 
-.hero p{
-  max-width:700px;
-  margin:10px auto;
+.header p{
   opacity:0.9;
-  font-size:18px;
 }
 
-/* ANIMATION */
-@keyframes fadeDown{
-  from{opacity:0; transform:translateY(-20px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
-@keyframes pop{
-  0%{transform:scale(0.95); opacity:0;}
-  100%{transform:scale(1); opacity:1;}
-}
-
-/* BUTTON PREMIUM */
-.btn{
-  display:inline-block;
-  margin-top:15px;
-  padding:14px 22px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
-  position:relative;
-  overflow:hidden;
-}
-
-/* SHINE EFFECT */
-.btn::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:-100%;
-  width:100%;
-  height:100%;
-  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
-  transition:0.5s;
-}
-
-.btn:hover::after{
-  left:100%;
-}
-
-.btn:hover{
-  transform:scale(1.05);
-}
-
-/* PREMIUM COLORS */
-.cta{
-  background:linear-gradient(135deg,#16a34a,#22c55e);
-  color:white;
-  box-shadow:0 10px 20px rgba(22,163,74,0.3);
-}
-
-.shopee{
-  background:linear-gradient(135deg,#ff3b30,#ff6b6b);
-  color:white;
-  box-shadow:0 10px 20px rgba(255,59,48,0.3);
-}
-
-.white{
-  background:white;
-  color:#16a34a;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* SECTION */
-section{
-  padding:60px 15px;
-  text-align:center;
-}
-
-/* CARD */
-.card{
-  background:white;
-  max-width:1000px;
+/* GRID CATALOG */
+.container{
+  max-width:1100px;
   margin:auto;
-  padding:25px;
-  border-radius:18px;
-  box-shadow:0 15px 40px rgba(0,0,0,0.08);
-  animation:pop 0.6s ease;
+  padding:20px;
 }
 
-/* GRID GAMBAR */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:12px;
-  margin-top:20px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
 }
 
-.grid img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-  border-radius:12px;
-  transition:0.3s;
-}
-
-.grid img:hover{
-  transform:scale(1.03);
-}
-
-/* BOX */
-.box{
-  background:#f1f5f9;
-  padding:15px;
-  border-radius:12px;
-  margin:10px;
-  transition:0.3s;
-}
-
-.box:hover{
-  transform:translateY(-3px);
-}
-
-/* FEATURES */
-.features{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:12px;
-  margin-top:20px;
-}
-
-.feature{
+/* PRODUCT CARD */
+.card{
   background:white;
-  padding:15px;
-  border-radius:12px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.05);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
   transition:0.3s;
 }
 
-.feature:hover{
+.card:hover{
   transform:translateY(-5px);
 }
 
-/* FLOAT WA */
-.float-wa{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#16a34a;
-  color:white;
-  padding:15px 18px;
-  border-radius:50px;
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.content{
+  padding:15px;
+}
+
+.price{
+  font-weight:bold;
+  color:#16a34a;
+  font-size:18px;
+  margin:5px 0;
+}
+
+/* BUTTONS */
+.btn{
+  display:block;
+  text-align:center;
+  padding:10px;
+  border-radius:10px;
   text-decoration:none;
   font-weight:bold;
-  box-shadow:0 10px 20px rgba(0,0,0,0.2);
-  z-index:999;
-  animation:pop 1s ease;
+  margin-top:8px;
+  transition:0.3s;
 }
 
-/* MAP */
-.map{
-  width:100%;
-  height:300px;
-  border:0;
-  border-radius:12px;
-  margin-top:15px;
+.btn:hover{
+  transform:scale(1.03);
 }
 
-/* TEXT */
-h1,h2,h3{margin:10px 0}
-p{line-height:1.6}
+.wa{
+  background:#16a34a;
+  color:white;
+}
+
+.shopee{
+  background:#ef4444;
+  color:white;
+}
+
+/* SECTION TITLE */
+.title{
+  text-align:center;
+  margin:30px 0;
+}
+
 </style>
 
 </head>
 
 <body>
 
-<!-- NAV -->
-<div class="nav">
-  <a href="#home">Home</a>
-  <a href="#produk">Produk</a>
-  <a href="#keunggulan">Keunggulan</a>
-  <a href="#cara">Cara Order</a>
-</div>
-
-<!-- HERO -->
-<div class="hero" id="home">
+<!-- HEADER -->
+<div class="header">
   <h1>THAFARA</h1>
-  <p>Kain Kafan Lengkap & Perlengkapan Jenazah Siap Pakai</p>
-
-  <a class="btn white" href="https://wa.me/6285752208934?text=Halo%20saya%20mau%20pesan%20Thafara">
-    👉 Pesan Sekarang
-  </a>
+  <p>Katalog Kain Kafan Lengkap & Siap Pakai</p>
 </div>
 
-<!-- PRODUK -->
-<section id="produk">
-<div class="card">
+<div class="container">
 
-  <h2>Paket Produk Thafara</h2>
+  <h2 class="title">🛍️ Katalog Produk</h2>
 
   <div class="grid">
-    <img src="produk11.jpg.jpeg">
-    <img src="produk12.jpg.jpeg">
-    <img src="produk13.jpg.jpeg">
-    <img src="produk14.jpg.jpeg">
-    <img src="produk15.jpg.jpeg">
-    <img src="produk16.jpg.jpeg">
+
+    <!-- PRODUCT 1 -->
+    <div class="card">
+      <img src="produk11.jpg.jpeg">
+      <div class="content">
+        <h3>Paket Perempuan</h3>
+        <div class="price">Rp 650.000</div>
+
+        <a class="btn wa"
+           href="https://wa.me/6285752208934?text=Saya%20mau%20order%20Paket%20Perempuan%20Thafara">
+          💬 WhatsApp
+        </a>
+
+        <a class="btn shopee"
+           href="https://id.shp.ee/ceqrooAD"
+           target="_blank">
+          🛒 Shopee
+        </a>
+      </div>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="card">
+      <img src="produk12.jpg.jpeg">
+      <div class="content">
+        <h3>Paket Laki-laki</h3>
+        <div class="price">Rp 630.000</div>
+
+        <a class="btn wa"
+           href="https://wa.me/6285752208934?text=Saya%20mau%20order%20Paket%20Laki-laki%20Thafara">
+          💬 WhatsApp
+        </a>
+
+        <a class="btn shopee"
+           href="https://id.shp.ee/ceqrooAD"
+           target="_blank">
+          🛒 Shopee
+        </a>
+      </div>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="card">
+      <img src="produk13.jpg.jpeg">
+      <div class="content">
+        <h3>Paket Standar</h3>
+        <div class="price">Rp 600.000</div>
+
+        <a class="btn wa"
+           href="https://wa.me/6285752208934">
+          💬 WhatsApp
+        </a>
+
+        <a class="btn shopee"
+           href="https://id.shp.ee/ceqrooAD"
+           target="_blank">
+          🛒 Shopee
+        </a>
+      </div>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="card">
+      <img src="produk14.jpg.jpeg">
+      <div class="content">
+        <h3>Paket Lengkap Premium</h3>
+        <div class="price">Rp 700.000</div>
+
+        <a class="btn wa"
+           href="https://wa.me/6285752208934">
+          💬 WhatsApp
+        </a>
+
+        <a class="btn shopee"
+           href="https://id.shp.ee/ceqrooAD"
+           target="_blank">
+          🛒 Shopee
+        </a>
+      </div>
+    </div>
+
+    <!-- PRODUCT 5 -->
+    <div class="card">
+      <img src="produk15.jpg.jpeg">
+      <div class="content">
+        <h3>Paket Masjid</h3>
+        <div class="price">Rp 750.000</div>
+
+        <a class="btn wa"
+           href="https://wa.me/6285752208934">
+          💬 WhatsApp
+        </a>
+
+        <a class="btn shopee"
+           href="https://id.shp.ee/ceqrooAD"
+           target="_blank">
+          🛒 Shopee
+        </a>
+      </div>
+    </div>
+
+    <!-- PRODUCT 6 -->
+    <div class="card">
+      <img src="produk16.jpg.jpeg">
+      <div class="content">
+        <h3>Paket Darurat</h3>
+        <div class="price">Rp 580.000</div>
+
+        <a class="btn wa"
+           href="https://wa.me/6285752208934">
+          💬 WhatsApp
+        </a>
+
+        <a class="btn shopee"
+           href="https://id.shp.ee/ceqrooAD"
+           target="_blank">
+          🛒 Shopee
+        </a>
+      </div>
+    </div>
+
   </div>
-
-  <div class="box">👩 Paket Perempuan — Rp 650.000</div>
-  <div class="box">👨 Paket Laki-laki — Rp 630.000</div>
-
-  <!-- BUTTONS PREMIUM -->
-  <a class="btn cta"
-     href="https://wa.me/6285752208934?text=Halo%20saya%20mau%20order%20Thafara">
-    ⚡ Order Cepat WhatsApp
-  </a>
-
-  <br>
-
-  <a class="btn shopee"
-     href="https://id.shp.ee/ceqrooAD"
-     target="_blank">
-    🛒 Beli di Shopee
-  </a>
-
 </div>
-</section>
-
-<!-- KEUNGGULAN -->
-<section id="keunggulan">
-<div class="card">
-
-  <h2>Kenapa Pilih Thafara?</h2>
-
-  <div class="features">
-    <div class="feature">✔ Siap pakai</div>
-    <div class="feature">✔ Sesuai syariat</div>
-    <div class="feature">✔ Bersih & rapi</div>
-    <div class="feature">✔ Pengiriman cepat</div>
-  </div>
-
-</div>
-</section>
-
-<!-- BUKTI SOSIAL -->
-<section>
-<div class="card">
-
-  <h2>Sudah Digunakan Oleh</h2>
-
-  <div class="features">
-    <div class="feature">🏥 Masjid & Mushola</div>
-    <div class="feature">👨‍👩‍👧 Keluarga Muslim</div>
-    <div class="feature">🤝 Komunitas Fardhu Kifayah</div>
-  </div>
-
-</div>
-</section>
-
-<!-- CARA ORDER -->
-<section id="cara">
-<div class="card">
-
-  <h2>Cara Order</h2>
-
-  <div class="box">1. Klik tombol WhatsApp</div>
-  <div class="box">2. Kirim pesan</div>
-  <div class="box">3. Konfirmasi alamat</div>
-  <div class="box">4. Barang dikirim</div>
-
-  <a class="btn cta"
-     href="https://wa.me/6285752208934">
-    👉 Mulai Order
-  </a>
-
-  <h2 style="margin-top:30px;">📍 Lokasi Kami</h2>
-
-  <iframe
-    class="map"
-    src="https://www.google.com/maps?q=HtiU5xhVNah5xpyC7&output=embed">
-  </iframe>
-
-</div>
-</section>
-
-<!-- FLOAT WA -->
-<a class="float-wa"
-   href="https://wa.me/6285752208934">
-💬 Chat
-</a>
 
 </body>
 </html>
