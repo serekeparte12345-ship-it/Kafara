@@ -2,140 +2,80 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Kafara | Perlengkapan Jenazah & Kain Kafan</title>
+<title>Kafara - Kain Kafan Lengkap & Perlengkapan Jenazah</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Kafara menyediakan perlengkapan kain kafan lengkap, siap pakai, dan program reseller fardhu kifayah di Indonesia.">
+<meta name="description" content="Kafara menyediakan kain kafan lengkap, perlengkapan jenazah siap pakai, dan peluang reseller fardhu kifayah di Indonesia.">
+
+<meta name="keywords" content="kain kafan lengkap, perlengkapan jenazah, paket kain kafan, reseller jenazah, fardhu kifayah">
 
 <style>
 body{
   margin:0;
-  font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  background:#f4f6fb;
-  color:#0f172a;
+  font-family:Arial;
+  background:#f5f7fb;
+  color:#111827;
 }
 
-/* NAV PREMIUM */
 .nav{
   position:sticky;
   top:0;
-  backdrop-filter:blur(12px);
-  background:rgba(255,255,255,0.7);
-  display:flex;
-  justify-content:center;
-  gap:20px;
+  background:white;
   padding:14px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.06);
-}
-.nav a{
-  text-decoration:none;
-  color:#0f172a;
-  font-weight:600;
-  font-size:14px;
+  text-align:center;
+  box-shadow:0 2px 10px rgba(0,0,0,0.06);
 }
 
-/* HERO */
-.hero{
-  padding:90px 20px;
+.nav a{
+  margin:10px;
+  text-decoration:none;
+  font-weight:bold;
+  color:#111827;
+}
+
+section{
+  padding:60px 20px;
   text-align:center;
-  background:linear-gradient(135deg,#ffffff,#e0f2fe,#ecfdf5);
 }
-.hero h1{
-  font-size:46px;
-  margin:0;
-  letter-spacing:2px;
-}
-.hero p{
-  max-width:650px;
-  margin:15px auto;
-  color:#475569;
-  font-size:17px;
+
+.card{
+  background:white;
+  max-width:900px;
+  margin:auto;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .btn{
   display:inline-block;
-  padding:14px 24px;
-  border-radius:14px;
+  margin-top:15px;
+  padding:14px 22px;
+  border-radius:10px;
   text-decoration:none;
-  font-weight:600;
-  margin-top:18px;
-}
-.primary{
-  background:#16a34a;
   color:white;
-  box-shadow:0 10px 25px rgba(22,163,74,0.25);
-}
-.secondary{
-  background:#2563eb;
-  color:white;
-  box-shadow:0 10px 25px rgba(37,99,235,0.25);
+  font-weight:bold;
 }
 
-/* SECTION */
-.section{
-  padding:70px 20px;
-  text-align:center;
-}
-
-/* CARD */
-.card{
-  background:white;
-  max-width:1000px;
-  margin:auto;
-  padding:35px;
-  border-radius:22px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.08);
-}
-
-/* IMAGE GRID PREMIUM */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:12px;
-  margin-top:20px;
-}
+.green{background:#16a34a;}
+.blue{background:#2563eb;}
 
 img{
   width:100%;
-  border-radius:16px;
-  height:160px;
-  object-fit:cover;
-  transition:0.3s;
+  max-width:420px;
+  border-radius:12px;
+  margin:10px;
 }
 
-img:hover{
-  transform:scale(1.03);
-}
-
-/* TEXT STYLE */
-h2{
-  font-size:28px;
-  margin-bottom:10px;
-}
-p{
-  color:#475569;
+.article{
+  text-align:left;
   line-height:1.7;
 }
 
-.badge{
-  display:inline-block;
-  padding:6px 14px;
-  border-radius:999px;
-  background:#e0f2fe;
-  color:#0369a1;
-  font-size:12px;
-  margin-bottom:10px;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:40px;
-  font-size:13px;
-  color:#64748b;
-}
+h1,h2,h3{margin:10px 0;}
 </style>
+
 </head>
 
 <body>
@@ -145,44 +85,48 @@ footer{
   <a href="#home">Home</a>
   <a href="#produk">Produk</a>
   <a href="#reseller">Reseller</a>
-  <a href="#kontak">Kontak</a>
+  <a href="#artikel">Artikel</a>
 </div>
 
-<!-- HERO -->
-<section id="home" class="hero">
+<!-- HOME -->
+<section id="home">
+<div class="card">
+
   <h1>KAFARA</h1>
+  <h2>Kain Kafan Lengkap & Perlengkapan Jenazah Siap Pakai</h2>
+
   <p>
-    Perlengkapan Kain Kafan Lengkap & Siap Pakai untuk kebutuhan fardhu kifayah.
+    Kafara menyediakan perlengkapan fardhu kifayah yang lengkap, bersih, dan siap digunakan kapan saja.
   </p>
 
-  <a class="btn primary"
+  <img src="produc1.jpg.png">
+
+  <a class="btn green"
      href="https://wa.me/6285752208934?text=Saya%20ingin%20pesan%20Kafara">
     👉 Pesan Sekarang
   </a>
+
+</div>
 </section>
 
 <!-- PRODUK -->
-<section id="produk" class="section">
+<section id="produk">
 <div class="card">
 
-  <span class="badge">Produk Premium</span>
-  <h2>Paket Perlengkapan Jenazah Kafara</h2>
+  <h2>Paket Kain Kafan Lengkap</h2>
+
+  <img src="produc1.jpg.png">
+  <img src="produk2.jpg">
+  <img src="produk3.jp3">
+  <img src="produk4.jpg">
+  <img src="produk5.jpg">
+  <img src="produk6.jpg">
 
   <p>
-    Paket lengkap, bersih, dan siap digunakan sesuai kebutuhan fardhu kifayah.
+    Paket lengkap perlengkapan jenazah sesuai kebutuhan fardhu kifayah.
   </p>
 
-  <div class="grid">
-    <img src="produc1.jpg.png">
-    <img src="produk2.jpg">
-    <img src="produk3.jp3">
-    <img src="produk4.jpg">
-    <img src="produk5.jpg">
-    <img src="produk6.jpg">
-  </div>
-
-  <a class="btn primary"
-     href="https://wa.me/6285752208934">
+  <a class="btn green" href="https://wa.me/6285752208934">
     👉 Beli Sekarang
   </a>
 
@@ -190,23 +134,16 @@ footer{
 </section>
 
 <!-- RESELLER -->
-<section id="reseller" class="section">
+<section id="reseller">
 <div class="card">
 
-  <span class="badge">Peluang Bisnis</span>
   <h2>Program Reseller Kafara</h2>
 
   <p>
-    Bangun penghasilan dari distribusi perlengkapan fardhu kifayah di wilayah Anda.
+    Peluang usaha perlengkapan jenazah dengan pasar stabil di masjid dan komunitas muslim.
   </p>
 
-  <p>
-    ✔ Produk selalu dibutuhkan<br>
-    ✔ Pasar stabil (masjid & komunitas)<br>
-    ✔ Bisa dari rumah
-  </p>
-
-  <a class="btn secondary"
+  <a class="btn blue"
      href="https://wa.me/6285752208934?text=Saya%20ingin%20jadi%20reseller">
     👉 Gabung Reseller
   </a>
@@ -214,25 +151,48 @@ footer{
 </div>
 </section>
 
-<!-- KONTAK -->
-<section id="kontak" class="section">
-<div class="card">
+<!-- ARTIKEL SEO -->
+<section id="artikel">
+<div class="card article">
 
-  <h2>Kontak Kafara</h2>
+  <h2>10 Artikel SEO Kafara</h2>
 
-  <p>Silakan hubungi kami untuk pemesanan atau kerja sama.</p>
+  <h3>1. Apa itu kain kafan lengkap?</h3>
+  <p>Kain kafan adalah kain yang digunakan untuk membungkus jenazah sesuai syariat Islam.</p>
 
-  <a class="btn primary"
-     href="https://wa.me/6285752208934">
-    WhatsApp Admin
+  <h3>2. Perlengkapan jenazah dalam Islam</h3>
+  <p>Perlengkapan jenazah termasuk kain kafan, kapas, dan perlengkapan mandi jenazah.</p>
+
+  <h3>3. Kenapa kain kafan harus siap?</h3>
+  <p>Karena kematian tidak dapat diprediksi sehingga perlu kesiapan.</p>
+
+  <h3>4. Perbedaan kain kafan pria dan wanita</h3>
+  <p>Pria 3 lapis, wanita 5 lapis sesuai ketentuan syariat.</p>
+
+  <h3>5. Fardhu kifayah dalam Islam</h3>
+  <p>Kewajiban kolektif umat Islam dalam pengurusan jenazah.</p>
+
+  <h3>6. Cara memilih kain kafan yang baik</h3>
+  <p>Pilih kain putih, bersih, dan tidak tipis.</p>
+
+  <h3>7. Peluang bisnis perlengkapan jenazah</h3>
+  <p>Bisnis stabil karena kebutuhan selalu ada.</p>
+
+  <h3>8. Cara menjadi reseller Kafara</h3>
+  <p>Cukup daftar via WhatsApp dan mulai jual di wilayah Anda.</p>
+
+  <h3>9. Kenapa masjid perlu stok kain kafan</h3>
+  <p>Untuk kesiapan jika ada jamaah yang meninggal.</p>
+
+  <h3>10. Paket kain kafan siap pakai</h3>
+  <p>Paket lengkap yang memudahkan proses fardhu kifayah.</p>
+
+  <a class="btn green" href="https://wa.me/6285752208934">
+    👉 Konsultasi Sekarang
   </a>
 
 </div>
 </section>
-
-<footer>
-© 2026 Kafara - Perlengkapan Fardhu Kifayah
-</footer>
 
 </body>
 </html>
